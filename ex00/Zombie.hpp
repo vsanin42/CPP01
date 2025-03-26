@@ -6,7 +6,7 @@
 /*   By: vsanin <vsanin@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 21:24:50 by vsanin            #+#    #+#             */
-/*   Updated: 2025/03/25 21:27:49 by vsanin           ###   ########.fr       */
+/*   Updated: 2025/03/26 11:20:04 by vsanin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,17 @@
 
 #include <string>
 
-class Zombie
+class 	Zombie
 {
 	private:
 		std::string name;
 	public:
 		void announce(void);
+		Zombie(std::string zombieName);
+		~Zombie();
 };
+
+Zombie* newZombie(std::string name);
+void 	randomChump(std::string name);
 
 #endif
