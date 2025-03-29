@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = antised
+NAME = no_sed_only_heppy
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
