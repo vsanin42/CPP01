@@ -6,7 +6,7 @@
 /*   By: vsanin <vsanin@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 21:24:01 by vsanin            #+#    #+#             */
-/*   Updated: 2025/03/29 22:35:45 by vsanin           ###   ########.fr       */
+/*   Updated: 2025/04/01 13:42:48 by vsanin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ int main(int argc, char **argv)
 {
 	if (argc != 4)
 	{
-		std::cout << "Wrong arguments! Usage: ./antised <filename> s1 s2" << "\n";
+		std::cout << "Wrong arguments! Usage: ./no_sed_only_heppy <filename> s1 s2" << "\n";
 		return 1;
 	}
 
