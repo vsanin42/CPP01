@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vsanin <vsanin@student.42prague.com>       +#+  +:+       +#+        */
+/*   By: vsanin <vsanin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 21:24:01 by vsanin            #+#    #+#             */
-/*   Updated: 2025/04/01 13:42:48 by vsanin           ###   ########.fr       */
+/*   Updated: 2025/04/02 21:25:11 by vsanin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ void heppy(std::ifstream& filein, std::ofstream& fileout, std::string& s1, std::
 	size_t pos;
 	size_t line_len;
 	size_t s1_len = s1.length();
+	size_t s2_len = s2.length();
 
 	std::getline(filein, line);
 	while (true)
@@ -66,8 +67,10 @@ void heppy(std::ifstream& filein, std::ofstream& fileout, std::string& s1, std::
 		while (pos != std::string::npos)
 		{
 			line_len = line.length();
-			line = line.substr(0, pos) + s2 + line.substr(pos + s1_len, line_len - (pos + s1_len));
-			pos = line.find(s1);
+			line = line.substr(0, pos)
+				 + s2
+				 + line.substr(pos + s1_len, line_len - (pos + s1_len));
+			pos = line.find(s1, pos + s2_len);
 		}
 		fileout << line;
 		if (!std::getline(filein, line))

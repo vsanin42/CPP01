@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vsanin <vsanin@student.42prague.com>       +#+  +:+       +#+        */
+/*   By: vsanin <vsanin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 21:33:26 by vsanin            #+#    #+#             */
-/*   Updated: 2025/03/26 22:12:56 by vsanin           ###   ########.fr       */
+/*   Updated: 2025/04/02 19:07:10 by vsanin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,11 @@ Zombie* zombieHorde(int N, std::string name)
 		return NULL;
 	Zombie* horde = new Zombie[N];
 	std::ostringstream stream;
-	std::string number;
 
 	for (int i = 0; i < N; i++)
 	{
 		stream << i + 1;
-		number = stream.str();
-		std::string zombieName = name + "_" + number;
+		std::string zombieName = name + "_" + stream.str();
 		horde[i].setName(zombieName);
 		stream.str("");
 		stream.clear();

@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vsanin <vsanin@student.42prague.com>       +#+  +:+       +#+        */
+/*   By: vsanin <vsanin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 21:24:01 by vsanin            #+#    #+#             */
-/*   Updated: 2025/03/27 00:57:25 by vsanin           ###   ########.fr       */
+/*   Updated: 2025/04/02 19:49:12 by vsanin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 #include "HumanB.hpp"
 
-#include <string>
 #include <iostream>
 
 int main(void)

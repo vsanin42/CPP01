@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = noviolence
+NAME = no_violence
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98

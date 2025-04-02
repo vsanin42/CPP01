@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vsanin <vsanin@student.42prague.com>       +#+  +:+       +#+        */
+/*   By: vsanin <vsanin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 23:08:17 by vsanin            #+#    #+#             */
-/*   Updated: 2025/03/27 00:10:39 by vsanin           ###   ########.fr       */
+/*   Updated: 2025/04/02 19:55:59 by vsanin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
 #include <iostream>
+#include <string>
 
 void HumanA::attack(void)
 {

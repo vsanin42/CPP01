@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vsanin <vsanin@student.42prague.com>       +#+  +:+       +#+        */
+/*   By: vsanin <vsanin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 13:47:27 by vsanin            #+#    #+#             */
-/*   Updated: 2025/04/01 18:33:34 by vsanin           ###   ########.fr       */
+/*   Updated: 2025/04/02 21:45:45 by vsanin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 #include <string>
 #include <iostream>
 
-void Harl::debug(void) { std::cout << "Harl: Debug." << "\n"; }
-void Harl::info(void) { std::cout << "Harl: Info." << "\n"; }
-void Harl::warning(void) { std::cout << "Harl: Warning." << "\n"; }
-void Harl::error(void) { std::cout << "Harl: Error." << "\n"; }
+void Harl::debug(void)		{ std::cout << "Harl: Debug." << "\n"; }
+void Harl::info(void)		{ std::cout << "Harl: Info." << "\n"; }
+void Harl::warning(void)	{ std::cout << "Harl: Warning." << "\n"; }
+void Harl::error(void)		{ std::cout << "Harl: Error." << "\n"; }
 Harl::Harl() {};
 Harl::~Harl() {};
 

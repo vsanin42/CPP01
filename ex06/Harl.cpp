@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vsanin <vsanin@student.42prague.com>       +#+  +:+       +#+        */
+/*   By: vsanin <vsanin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 13:47:27 by vsanin            #+#    #+#             */
-/*   Updated: 2025/04/01 20:50:51 by vsanin           ###   ########.fr       */
+/*   Updated: 2025/04/02 22:08:11 by vsanin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,35 +30,22 @@ void Harl::error(void)		{ std::cout << "Harl: Error." << "\n"; }
 Harl::Harl() {};
 Harl::~Harl() {};
 
-Complaint* Harl::getComplaintArray(void)
-{
-	static Complaint complaintArray[] = {
-		{ "DEBUG", &Harl::debug },
-		{ "INFO", &Harl::info },
-		{ "WARNING", &Harl::warning }, 
-		{ "ERROR", &Harl::error }
-	};
-	return complaintArray;
-}
-
 void Harl::complain(std::string level)
 {
-	Complaint* complaintArray = Harl::getComplaintArray();
-
 	std::cout << "-----" << "\n";
 	switch (getLevel(level))
 	{
 		case DEBUG:
-			(this->*(complaintArray[DEBUG].func))();
+			(this->*(&Harl::debug))();
 			/* fallthrough */
 		case INFO:
-			(this->*(complaintArray[INFO].func))();
+			(this->*(&Harl::info))();
 			/* fallthrough */
 		case WARNING:
-			(this->*(complaintArray[WARNING].func))();
+			(this->*(&Harl::warning))();
 			/* fallthrough */
 		case ERROR:
-			(this->*(complaintArray[ERROR].func))();
+			(this->*(&Harl::error))();
 			break;
 		default:
 			std::cout << "Harl: No output message matched the complaint type!" << "\n";

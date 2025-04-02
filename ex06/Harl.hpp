@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vsanin <vsanin@student.42prague.com>       +#+  +:+       +#+        */
+/*   By: vsanin <vsanin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 13:47:01 by vsanin            #+#    #+#             */
-/*   Updated: 2025/04/01 20:17:40 by vsanin           ###   ########.fr       */
+/*   Updated: 2025/04/02 22:07:56 by vsanin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ enum Level {
 
 Level getLevel(const std::string& level);
 
-struct Complaint;
-
 class Harl
 {
 	private:
@@ -38,15 +36,6 @@ class Harl
 		Harl();
 		~Harl();
 		void complain(std::string level);
-		Complaint* getComplaintArray(void);
-};
-	
-typedef void (Harl::*ptfHarl) (void);
-
-struct Complaint
-{
-	std::string	name;
-	ptfHarl 	func;
 };
 
 #endif
